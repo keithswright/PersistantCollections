@@ -5,14 +5,14 @@ using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using System.IO;
 
-namespace PersistantCollections
+namespace PersistentCollections
 {
-    public class PersistantDictionary<TKey, TValue> : IDictionary<TKey, TValue>
+    public class PersistentDictionary<TKey, TValue> : IDictionary<TKey, TValue>
     {
         private readonly Dictionary<TKey, TValue> dictionary;
         private readonly string path;
 
-        public PersistantDictionary(string path)
+        public PersistentDictionary(string path)
         {
             this.path = path;
             if (File.Exists(path))
