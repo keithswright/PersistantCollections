@@ -7,5 +7,13 @@ My requirements were:
  - no database setup
  - high performance is not required
  
- I belive the PersistentDictionary<TKey, TValue> class should do the job, because it is a drop-in replacement for Dictionary<TKey,TValue>, follows the SyncRoot pattern for thread safety and only requires a simple file on the disk.
+I belive the 
+```cs
+PersistentDictionary<TKey, TValue> 
+```
+class should do the job, because it is a drop-in replacement for 
+```cs
+Dictionary<TKey,TValue>
+```
+ , it follows the SyncRoot pattern for thread safety and only requires a simple file on the disk.
 It is not battle tested yet, but I will be using it soon.
